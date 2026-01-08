@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baker Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- الخلفية فيديو -->
+<video autoplay muted loop id="bgVideo">
+    <source src="media/intro.mp4" type="video/mp4">
+</video>
+
+<!-- روابط تيك توك وديسكورد فوق المربع -->
+<div class="socials-top">
+    <a href="https://www.tiktok.com/@..baqr" target="_blank">TikTok</a>
+    <span>Discord: <b>b_32b</b></span>
+</div>
+
+<!-- المرحلة 1: البصمة -->
+<div class="box active" id="stage1">
+    <h2>ادخل بالبصمة</h2>
+    <img src="media/fingerprint.png" id="fingerprint" class="fingerprint">
+    <p id="fpText">اضغط 5 ثواني</p>
+</div>
+
+<!-- المرحلة 2: إدخال الإيميل -->
+<div class="box" id="stage2">
+    <h2>أدخل الإيميل لإكمال الدخول</h2>
+    <input type="email" id="email" placeholder="example@gmail.com">
+    <button onclick="saveEmail()">متابعة</button>
+</div>
+
+<!-- المرحلة 3: Username & Password -->
+<div class="box" id="stage3">
+    <h2 id="welcome">أهلاً بك</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button type="submit">LOGIN</button>
+    </form>
+</div>
+
+<!-- الأصوات -->
+<audio id="fpSound" src="media/sound-fingerprint.mp3"></audio>
+<audio id="clickSound" src="media/sound-click.mp3"></audio>
+<audio id="successSound" src="media/sound-success.mp3"></audio>
+<audio id="errorSound" src="media/sound-error.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
